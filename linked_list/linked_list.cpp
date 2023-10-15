@@ -469,4 +469,171 @@ using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//check pallindrome using array.
+//  int main(){
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+//     int arr2[n];
+//     int s=0;
+//     int e=n-1;
+//     while(s<e){
+//         swap(arr[s],arr[e]);
+//         s++;
+//         e--;
+//     }
+//     int temp;
+//     for(int i=0;i<n;i++){
+//         temp=arr[i];
+//         arr2[i]=arr[i];
+//     }
+//     bool yes=false;
+//     for(int i=0;i<n;i++){
+//         if(arr[i]==arr2[i]){
+//             yes=true;
+//         }
+//     }
+//     if(yes==true){
+//         cout<<"yes";
+//     }
+//     else{
+//         cout<<"no";
+//     }
+//  }
+
+
+//delete duplicate
+// class Node{
+//     public:
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this -> data=data;
+//         this -> next=NULL;
+//     }
+// };
+// void inserttail(Node* &tail,int d){
+//     Node* temp=new Node(d);
+//     tail -> next=temp;
+//     tail = temp;
+// }
+// void print(Node* &tail){
+//     Node* temp=tail;
+//     while(temp != NULL){
+//         cout<< temp -> data <<" ";        
+//         temp=temp -> next;
+//     }
+// }
+// Node* deleteDuplicates(Node* head){
+//     Node* curr=head;
+//     Node* forward=NULL;
+//     while(curr!=NULL){
+//         forward=curr->next;
+//         if(curr->data==forward->data){
+//             curr->next=forward->next;
+//             forward->next=NULL;
+//         }
+//         curr=curr->next;
+//     }
+//     return head;
+// }
+// int main(){
+
+//     Node* node1=new Node(1);
+
+//     Node* tail=node1;
+//     Node* head=node1;
+
+//     inserttail(tail,1);
+//     inserttail(tail,2);
+//     inserttail(tail,3);
+//     inserttail(tail,3);
+
+//     Node* head2=deleteDuplicates(head);
+//     print(head2);
+// }
+
+
+
+//delete node with given value.
+// class Node{
+//     public:
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this -> data=data;
+//         this -> next=NULL;
+//     }
+// };
+// void insertHead(Node* &head,int d){
+//     //new node create
+//     Node* temp=new Node(d);  //as new data is passed new node will be created.
+//     temp -> next=head;
+//     head=temp;
+// }
+// void inserttail(Node* &tail,int d){
+//     Node* temp=new Node(d);
+//     tail -> next=temp;
+//     tail = temp;
+// }
+
+// void deletenode(Node* &head,int val){
+    // while(head!=nullptr && head->data==val){
+    //     Node* temp=head;
+    //     head = head -> next;
+    //     // temp -> next = NULL;
+    //     delete temp;
+    // }
+    // Node* curr = head;
+    // Node* prev = NULL;
+    // while(curr!=nullptr){
+    //     if(curr->data==val){
+    //         prev -> next = curr -> next;
+    //         curr -> next = NULL;
+    //         curr=prev->next;
+    //     }
+    //     else{
+    //         prev=curr;
+    //         curr=curr -> next;
+    //         }
+    // } 
+// }
+// void print(Node* &tail){
+//     Node* temp=tail;
+//     while(temp != NULL){
+//         cout<< temp -> data <<" ";
+//         temp=temp -> next;
+//     }
+//     //cout<<endl;
+// }
+
+// int main(){
+
+//     Node* node1=new Node(1);
+//     //cout<<node1 -> data <<endl;
+//     //cout<<node1 -> next <<endl;
+
+//     Node* head=node1;
+//     Node* tail=node1;
+
+
+//     inserttail(tail,1);
+//     inserttail(tail,1);
+//     inserttail(tail,1);
+//     // inserttail(tail,4);
+//     // inserttail(tail,5);
+//     // inserttail(tail,6);
+
+//     print(head);
+//     cout<<endl;
+
+//     deletenode(head,3);
+//     print(head);
+
+// }
 
