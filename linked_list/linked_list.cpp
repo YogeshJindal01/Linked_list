@@ -710,3 +710,220 @@ using namespace std;
 //     deletenode(head,2,5);
 //     print(head);
 // }
+
+
+
+//check pallindrome.
+// class Node{
+//     public:
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this -> data=data;
+//         this -> next=NULL;
+//     }
+// };
+// void insertHead(Node* &head,int d){
+//     //new node create
+//     Node* temp=new Node(d);  //as new data is passed new node will be created.
+//     temp -> next=head;
+//     head=temp;
+// }
+// void inserttail(Node* &tail,int d){
+//     Node* temp=new Node(d);
+//     tail -> next=temp;
+//     tail = temp;
+// }
+// int print(Node* &tail){
+//     Node* temp=tail;
+//     int count=0;
+//     while(temp != NULL){
+//         cout<< temp -> data <<" ";
+//         temp=temp -> next;
+//         count++;
+//     }
+//     // return count;
+// }
+// int checkPallin(Node* &head){
+//     Node* head1=head;
+//     Node* tail=head;
+//     while(tail!=NULL){
+//         tail=tail->next;
+//     }
+//     while(head1!=NULL){
+//         if(head1->data==tail->data){
+//             head1=head1-next;
+            
+//         }
+//     }
+// }
+// int main(){
+
+//     Node* node1=new Node(1);
+
+//     Node* head=node1;
+//     Node* tail=node1;
+
+
+//     inserttail(tail,2);
+//     inserttail(tail,3);
+//     inserttail(tail,4);
+//     inserttail(tail,5);
+
+//     print(head);
+//     cout<<endl;
+
+//     checkPallin(head);
+//     // print(head);
+// }
+
+
+
+//insert greatest common divisor.
+// class Node{
+//     public:
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this -> data=data;
+//         this -> next=NULL;
+//     }
+// };
+// void insertHead(Node* &head,int d){
+//     //new node create
+//     Node* temp=new Node(d);  //as new data is passed new node will be created.
+//     temp -> next=head;
+//     head=temp;
+// }
+// void inserttail(Node* &tail,int d){
+//     Node* temp=new Node(d);
+//     tail -> next=temp;
+//     tail = temp;
+// }
+// int print(Node* &tail){
+//     Node* temp=tail;
+//     int count=0;
+//     while(temp != NULL){
+//         cout<< temp -> data <<" ";
+//         temp=temp -> next;
+//         count++;
+//     }
+//     // return count;
+// }
+// Node* greatest_divisor(Node* head){
+//     if(head->next==NULL){
+//         return head;
+//     }
+//     Node* curr=head;
+//     Node* forward=curr->next;
+
+//     while(curr!=NULL && forward!=NULL){
+//         int a=curr->data;
+//         int b=forward->data;
+//         Node* temp=new Node(__gcd(a,b));
+//         temp->next=forward;
+//         curr->next=temp;
+//         curr=forward;
+//         forward=forward->next;
+//     }
+//     return head;
+// }
+// int main(){
+
+//     Node* node1=new Node(18);
+
+//     Node* head=node1;
+//     Node* tail=node1;
+
+
+//     inserttail(tail,6);
+//     inserttail(tail,10);
+//     inserttail(tail,3);
+//     // inserttail(tail,5);
+
+//     print(head);
+//     cout<<endl;
+
+//     greatest_divisor(head);
+//     print(head);
+// }
+
+
+
+//Merge Nodes in Between Zeros.
+// class Node{
+//     public:
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this -> data=data;
+//         this -> next=NULL;
+//     }
+// };
+// void insertHead(Node* &head,int d){
+//     //new node create
+//     Node* temp=new Node(d);  //as new data is passed new node will be created.
+//     temp -> next=head;
+//     head=temp;
+// }
+// void inserttail(Node* &tail,int d){
+//     Node* temp=new Node(d);
+//     tail -> next=temp;
+//     tail = temp;
+// }
+// int print(Node* &tail){
+//     Node* temp=tail;
+//     int count=0;
+//     while(temp != NULL){
+//         cout<< temp -> data <<" ";
+//         temp=temp -> next;
+//         count++;
+//     }
+//     // return count;
+// }
+// Node* merge(Node* head){
+//     Node* curr=head;
+//     Node* forward=curr->next;
+//     Node* temp=NULL;
+//     while(curr!=NULL){
+//         int a=0;
+//         while(forward->data!=0){
+//             int b=forward->data;
+//             a+=b;
+//             forward=forward->next;
+//         }
+//         temp=new Node(a);
+//         // cout<<temp->data<<endl;
+//         curr=forward;
+//         forward=forward->next;
+//     }
+//     return temp;
+// }
+// int main(){
+
+//     Node* node1=new Node(0);
+
+//     Node* head=node1;
+//     Node* tail=node1;
+
+
+//     inserttail(tail,3);
+//     inserttail(tail,1);
+//     inserttail(tail,0);
+//     inserttail(tail,4);
+//     inserttail(tail,5);
+//     inserttail(tail,2);
+//     inserttail(tail,0);
+
+//     print(head);
+//     cout<<endl;
+
+//     Node* zeroes=merge(head);
+//     Node* head2=zeroes;
+//     print(head2);
+    
+
+// }
